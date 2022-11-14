@@ -1,5 +1,7 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
-const Videos = (props) => <h1>Videos</h1>;
-
-export default Videos;
+export default function Videos() {
+  const { keyword } = useParams();
+  return <div>Videos {keyword ? `🔍${keyword}` : '🔥'}</div>;
+}
