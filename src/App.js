@@ -5,15 +5,18 @@ import {
   QueryClientProvider,
   useQuery,
 } from '@tanstack/react-query';
+import { YoutubeProvider } from './context/YoutubeApiContext';
 
 const queryClient = new QueryClient();
 function App() {
   return (
     <>
       <SearchHeader />
-      <QueryClientProvider client={queryClient}>
-        <Outlet />
-      </QueryClientProvider>
+      <YoutubeProvider>
+        <QueryClientProvider client={queryClient}>
+          <Outlet />
+        </QueryClientProvider>
+      </YoutubeProvider>
     </>
   );
 }
