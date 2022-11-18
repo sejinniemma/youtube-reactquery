@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import VideoCard from './VideoCard';
+import VideoCard from '../components/VideoCard';
 import { useYoutubeApi } from '../context/YoutubeApiContext';
 
 export default function Videos() {
